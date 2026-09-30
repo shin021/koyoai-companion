@@ -1,15 +1,13 @@
-# こより - AIコンパニオン
+# こより AIコンパニオン（Cloudflare Workers版）
 
-博衣こよりをモチーフにした、ファン向けの会話Webアプリです。
-実在の本人ではなく、架空のAIコンパニオンとして動作します。
+現在のCloudflareプロジェクトが `npx wrangler deploy` を使うWorkers型だったため、WorkersのStatic Assets + Worker API方式に変更した版です。
 
-## ファイル
-- index.html
-- style.css
-- script.js
-- functions/api/chat.js
-- manifest.webmanifest
+## 構成
+- `public/` : HTML / CSS / JavaScript
+- `src/index.js` : `/api/chat` と静的ファイルを処理
+- `wrangler.jsonc` : Workers AI Binding とStatic Assets設定
 
-## 公開
-GitHubにこのフォルダの中身をアップロードし、Cloudflare PagesでGit連携します。
-Workers AI Bindingの変数名は `AI` にしてください。
+## Cloudflare
+Workers AI binding variable name: `AI`
+
+この版では `@cf/zai-org/glm-4.7-flash` を使用します。
