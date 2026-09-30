@@ -1,0 +1,9 @@
+{
+  "name": "こより - AIコンパニオン",
+  "short_name": "こより",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff6fa",
+  "theme_color": "#fff2f7",
+  "lang": "ja"
+}

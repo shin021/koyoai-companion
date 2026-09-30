@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff2f7">
+  <meta name="description" content="こよりをモチーフにしたファン向けAIコンパニオン">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/style.css">
+  <title>こより - AIコンパニオン</title>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="avatar">🧪</div>
+      <div class="title-wrap">
+        <h1>こより</h1>
+        <p><span class="status-dot"></span>AIコンパニオン</p>
+      </div>
+      <button id="clearBtn" class="icon-btn" aria-label="会話を消去" title="会話を消去">↺</button>
+    </header>
+
+    <section id="chat" class="chat" aria-live="polite"></section>
+
+    <div id="typing" class="typing hidden">
+      <span></span><span></span><span></span>
+      <em>こよりが入力中…</em>
+    </div>
+
+    <form id="chatForm" class="composer">
+      <textarea id="message" rows="1" maxlength="1000" placeholder="こよりにメッセージ…" autocomplete="off"></textarea>
+      <button id="sendBtn" type="submit" aria-label="送信">➤</button>
+    </form>
+
+    <p class="hint">Enterで送信 / Shift+Enterで改行</p>
+  </main>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
